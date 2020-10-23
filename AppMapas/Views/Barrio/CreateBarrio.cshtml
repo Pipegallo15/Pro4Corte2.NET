@@ -1,0 +1,17 @@
+﻿@model AppMapas.Domain.Barrio
+@{List<SelectListItem> items = (List<SelectListItem>)ViewBag.items; }
+
+<form asp-action="CreateMunicipio">
+
+    <H1>Ingrese datos Barrio</H1>
+    <br />
+    <label>Ingrese Nombre Barrio</label>
+    <br />
+    <input type="text" asp-for="Nombre" />
+    <br />
+    @Html.DropDownList("datos", items, "selecciona un Municipio", new { })
+    <br />
+    <input type="submit" value="Guardar" />
+
+
+</form>
